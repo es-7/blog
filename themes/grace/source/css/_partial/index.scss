@@ -1,0 +1,61 @@
+.posts-container {
+	.rows {
+		margin: 2em 0;
+		padding: 1.25em;
+		background-color: map-get($post, background);
+		border-radius: $border-radius-base;
+		border: none;
+		box-shadow: 0px 0px 25px 1px rgba(46,61,73,.2);
+		@for $i from 1 through 6 {
+			h#{$i} {
+				padding-bottom: 0.3125em;
+				font-weight: 500;
+			}
+		}
+	}
+	.post-info {
+		border-bottom: 1px dashed map-get($code, border-color);
+	}
+	.post-info:after {
+		content: '';
+		clear: both;
+		display: table;
+	}
+	.post-title {
+		float: left;
+		font-size: 1.5em;
+		a {
+			color: $font-color-base;
+			padding-bottom: 0;
+			&:hover {
+				//border-bottom: 0.125em solid $font-color-base;
+				color: $font-color-green;
+			}
+		}
+	}
+	.post-meta {
+		padding-top: 0.625em;
+		float: right;
+		.time,
+		.tag {
+			font-size: map-get($head-font-size, h5);
+			color: $tags-font-color;
+		}
+		.category-list {
+            color: $font-color-green;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+	}
+	.read-btn {
+		margin-top: 0.625em;
+		padding-bottom: 0.3125em;
+		border-bottom: 0.125em solid $font-color-green;
+		font-size:  map-get($head-font-size, h6);
+		font-weight: bold;
+		color: $font-color-green;
+		letter-spacing: 0.0625em;
+	}
+	@import "_post/_post.scss";
+}

@@ -1,0 +1,28 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  About: /about
+
+#Profile
+profile:
+  social:
+    github: https://github.com/buhuo00
+    zhihu: https://www.zhihu.com/people/liu-deng-42-20/activities
+    email: 593265790@qq.com
+
+#site 
+site:
+  description: 提供前端，javaScript，Canvas，WebGL，可视化教程学习
+  keywords: javaScript,CSS,Canvas,WebGL,前端,CSS3,不惑的技术博客
+  favicon: /favicon.png
+  
+#Comment
+disqus_shortname: #fencer-1 #disqus
+livere: MTAyMC8zMjQ1MS85MDEy 
+
+#RSS
+rss: atom.xml
+
+# Version
+version: 2.0.0

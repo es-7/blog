@@ -1,0 +1,30 @@
+.archives-container {
+    margin: 2em 0;
+    padding: 1.25em;
+    width: $container-width;
+    background-color: map-get($post, background);
+    box-sizing: border-box;
+    .archive-title {
+        padding: 1.375em;
+
+        .archive-year {
+            font-weight: normal;
+            font-size: 1.875em;
+        }
+    }
+    .archive-post {
+        padding: 0.625em 1.375em;
+        .archive-post-time {
+            //font-size: map-get($head-font-size, h5);
+            color: $tags-font-color;
+        }
+        .archive-post-link {
+            padding: 0 0.625em;
+            font-size: map-get($head-font-size, h3);
+            color: $font-color-green;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+#header
+Nav:
+  Home: 首页
+  Archives: 归档
+  About: 关于
+
+#Paginator
+Paginator: 
+  Prev: 上一页
+  Next: 下一页
+
+#RSS
+RSS: RSS
+
+#Read
+Read: 阅读全文

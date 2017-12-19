@@ -1,0 +1,16 @@
+<div class="about-container">
+    <div class="about-content">
+        <%- page.content %>
+    </div>
+    <div class="social-content">
+        <h1 class="social-title">联系</h1>
+        <ul class="social-list">
+			<% for (var way in theme.profile.social){ %>
+          		<li class="social-item">
+                    <span class="social-name"><%= way %>：</span>
+					<a class="social-link" href="<%= theme.profile.social[way] %>" target="_blank">@不惑</a>
+				</li>
+        	<% } %>
+		</ul>
+    </div>
+</div>

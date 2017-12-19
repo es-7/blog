@@ -1,0 +1,15 @@
+<div class="post-container">
+	<div class="post-title-info">
+		<div class="post-title">
+			<h2 class="title"><%= page.title %></h2>
+		</div>
+		<div class="post-meta">
+			<% page.categories.forEach(function(item){ %>
+				<a class="category-list" href="<%- url_for(item.path)%>"><%= item.name %></a>
+			<% })%>
+			<span class="post-time"><%- date(page.date, "YYYY-MM-DD") %></span>
+		</div>
+	</div>
+	<div class="post-content"><%- page.content %></div>
+</div>
+<%- partial('_partial/paginator', {post: page}) %>

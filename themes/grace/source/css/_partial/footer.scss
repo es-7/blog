@@ -1,0 +1,21 @@
+.footer {
+    margin-top: 2.5em;
+    background-color: map-get($header, background);
+    clear: both;
+    .footer-container {
+        margin: 0  auto;
+        padding: 0.625em 0;
+		width: map-get($header, width);
+        text-align: center;
+        color: map-get($header, color);
+        p {
+            padding: 0.375em 0;
+        }
+        a {
+            color: map-get($header, color);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

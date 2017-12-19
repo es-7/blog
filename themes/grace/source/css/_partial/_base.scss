@@ -1,0 +1,17 @@
+html {
+	font-size: 100%;
+}
+body {
+	background-color: $body-background;
+	font-size: 1em;
+	font-family: Helvetica, Arial, sans-serif;
+    color: $font-color-base;
+    font-weight: 300;
+}
+.main-container {
+    margin: 2.5em auto 0 auto;
+	width: $container-width;
+}
+hr {
+    border: 0.0625em dashed map-get($code, border-color);
+}

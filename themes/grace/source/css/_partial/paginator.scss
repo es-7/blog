@@ -1,0 +1,21 @@
+.page-nav {
+	margin: 3em auto;
+	width: $container-width;
+	overflow: hidden;
+	.prev-link,
+	.next-link {
+		font-size: 1.25em;
+		//font-weight: bold;
+		color: $font-color-green;
+		box-sizing: border-box;
+		&:hover {
+			border-bottom: 0.0625em solid $font-color-green;
+		}
+	}
+	.prev-link {
+		float: left;
+	}
+	.next-link {
+		float: right;
+	}
+}

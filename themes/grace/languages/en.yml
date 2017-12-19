@@ -1,0 +1,16 @@
+#header
+Nav:
+  Home: Home
+  Archives: Archives
+  About: About
+
+#Paginator
+Paginator: 
+  Prev: Prev
+  Next: Next
+
+#RSS
+RSS: RSS
+
+#Read
+Read: Read more

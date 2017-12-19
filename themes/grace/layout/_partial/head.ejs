@@ -1,0 +1,35 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- description -->
+	<% if (config.description){ %>
+		<meta name="description" content="<%- config.description %>"/>
+	<% } else if (theme.site.description) { %>
+		<meta name="description" content="<%- theme.site.description %>"/>
+	<% } %>
+	<!-- keywords -->
+	<% if (theme.site.keywords){ %>
+		<meta name="keywords" content="<%- theme.site.keywords %>" />
+	<% } %>
+	
+	<%
+		var title = '';
+  
+		if (is_post()){
+			title = page.title + '-' + config.title;
+		}else if (is_category()) {
+			title = page.category + '-' + config.title;
+		}else {
+			title = (config.description || theme.site.description ) + '-' + config.title;
+		}
+	%>
+	<title><%= title %></title>
+	
+	<!-- favicon -->
+	<% if (theme.site.favicon){ %>
+		<link rel="icon" href="<%- theme.site.favicon %>" type="image/x-icon">
+	<% } %>
+
+	<!-- css -->
+	<%- css('css/style.css') %>
+</head>

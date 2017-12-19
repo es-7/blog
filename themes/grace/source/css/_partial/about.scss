@@ -1,0 +1,45 @@
+.about-container {
+    margin: 2.5em auto;
+    padding: 1.25em;
+    width: $container-width;
+    background-color: map-get($post, background);
+    box-sizing: border-box;
+    .about-content {
+
+        h1,h2,h3,h4 {
+            margin: 2em 0 1em 0;
+            font-weight: normal;
+            font-size: map-get($head-font-size, h1)
+        }
+        p {
+            line-height: 2em;
+            a {
+                color: $font-color-green;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .social-content {
+        .social-title {
+            margin: 2em 0 1em 0;
+            font-size: map-get($head-font-size, h1)
+        }
+        h1,h2,h3,h4 {
+            font-weight: normal;
+        }
+
+        .social-list {
+            li {
+                line-height: 2em;
+                a {
+                    color: $font-color-base;
+                    &:hover {
+                        color: $font-color-green;
+                    }
+                }
+            }
+        }
+    }
+}

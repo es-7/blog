@@ -1,0 +1,28 @@
+<div class="archives-container">
+	<% if (is_archive()) { %>
+		<% var diff %>
+		<% page.posts.forEach( function(post){ %>
+			<% var year = post.date.year(); %>
+			<% if(year !== diff) { %>
+				<% diff = year %>
+				<div class="archive-title">
+					<h1 class="archive-year"><%= year %></h1>
+				</div>
+			<%	} %>
+			<div class="archive-post">
+				<span class="archive-post-time"><%= date(post.date, 'MM-DD') %></span>
+				<a href="<%- url_for(post.path) %>" class="archive-post-link"><%= post.title %></a>
+			</div>
+		<% }) %>
+	<% } else if (is_category()) { %>
+		<div class="archive-title">
+				<h1 class="archive-year"><%= page.category %></h1>
+		</div>
+		<% page.posts.forEach( function(post){ %>
+			<div class="archive-post">
+				<span class="archive-post-time"><%= date(post.date, 'YY-MM-DD') %></span>
+				<a href="<%- url_for(post.path) %>" class="archive-post-link"><%= post.title %></a>
+			</div>
+		<% }) %>
+	<% } %>
+</div>

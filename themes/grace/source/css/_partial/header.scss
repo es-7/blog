@@ -1,0 +1,28 @@
+.header {
+	background-color: map-get($header, background);
+	.nav-header {
+		margin: 0 auto;
+		width: map-get($header, width);
+		height: map-get($header, height);		
+		line-height: map-get($header, height);
+		.navbar-logo {
+			float: left;
+		}
+		.navbar-nav {
+			float: right;
+
+			li {
+				padding: 0 0.625em;
+				float: left;
+			}
+		}
+		a {
+			color: map-get($header, color);
+			font-size: map-get($header, size);
+
+			&:hover {
+				color: $font-color-green;
+			}
+		}
+	}
+}

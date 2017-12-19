@@ -1,0 +1,12 @@
+@import "utils/reset",
+		"utils/variables";
+
+@import "_partial/_base",
+		"_partial/header",
+		"_partial/footer",
+		"_partial/paginator",
+		"_partial/post",
+		"_partial/archive",
+		"_partial/index",
+		"_partial/about",
+		"_partial/comment";

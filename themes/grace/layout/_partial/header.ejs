@@ -1,0 +1,23 @@
+<div class="header">
+	<div class="nav-header">
+		<div class="navbar-logo">
+			 <a href="<%- url_for() %>" class="logo"><%= config.title %></a>
+		</div>
+		<ul class="navbar-nav">
+			<% for (var name in theme.menu){ %>
+          		<li class="nav-item">
+					<a class="main-nav-link" href="<%- url_for(theme.menu[name])%>"><%= __('Nav.'+name) %></a>
+				</li>
+			<% } %>
+			<% if(config.feed && config.feed.path){ %>
+				<li class="nav-item">
+					<a class="main-nav-link" href="<%- url_for(config.feed.path)%>"><%= __('RSS') %></a>
+				</li>
+			<% } else if(theme.rss){ %>
+				<li class="nav-item">
+					<a class="main-nav-link" href="<%- url_for(theme.rss)%>"><%= __('RSS') %></a>
+				</li>
+			<% } %>
+		</ul>
+	</div>
+</div>

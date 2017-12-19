@@ -1,0 +1,80 @@
+.post-content {
+    padding: 1em 0;
+    line-height: 2em;
+    border: none;
+    @for $i from 1 through 6 {
+        h#{$i} {
+            margin: 1em 0 0.375em 0;
+            font-weight: 300;
+            font-size: (7 - $i)*0.375em;
+        }
+    }
+    p {
+        line-height: 2em;	
+    }	
+    img {
+        margin: auto;
+        display: block;
+        max-width: 100%;
+    }
+    strong {
+        font-weight: 600;
+    }
+    .video-container {
+        position: relative;
+        padding-bottom: 50%;
+        height: 0;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }	
+    ul {
+        margin-left: 2em;
+        list-style: disc;
+        li {
+            font-size: map-get($head-font-size, h5)
+        }
+    }
+    ol {
+        margin-left: 2em;
+        list-style: decimal;
+        li {
+            font-size: map-get($head-font-size, h5)
+        }
+    }
+    dl {
+        margin-left: 1em;
+        dt {
+            font-weight: 600;
+        }
+    }
+    a {
+        color: $font-color-green;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    table {
+        width: 100%;
+        tr {
+            border-bottom: 0.0375em solid map-get($post , border-color);
+
+            th, 
+            td {
+                padding: 0.3125em 0;
+                text-align: left;
+            }
+        }
+    }
+    blockquote {
+        margin: 1.25em;
+        padding: 0.625em;
+        background-color: map-get($blockquote, background);
+        border-left: 0.25em solid map-get($blockquote, border-color);
+    }
+    @import "_code.scss";
+}

@@ -1,0 +1,87 @@
+
+code {
+    background: map-get($code, tags-color);
+    padding: 0.3em;
+}
+
+.highlight {
+    margin: 1em 0;
+    padding: 0.625em 1em;
+    background: map-get($code, background);
+    color: map-get($code, code-color);
+    border-radius: map-get($code, border-radius);
+    line-height: 1.25em;
+    table {
+        tr {
+            border: none;
+        }
+    }
+    figcaption {
+        font-size: map-get($head-font-size, h6);
+        color: $tags-font-color;
+        span {
+            float: left;
+        }
+        a {
+            float: right;
+        }
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+    .gutter {
+        pre {
+            padding-right: 1.25em;
+        }
+        .line {
+            color: map-get($code, line-color);
+        }
+    }
+    .code {
+        pre {
+            font-family: "Source Code Pro", Consolas, Menlo;
+        }
+        .string {
+            color: map-get($code, code-string);
+        }
+        .built_in,
+        .number,
+        .params {
+            color: map-get($code, built-in);
+        }
+        .keyword {
+            color: map-get($code, keyword);
+        }
+        .marked {
+            background-color: map-get($code, marked-background);
+        }
+        .comment {
+            color: $tags-font-color;
+        }
+    }
+}
+.gist {
+    .highlight {
+        background: map-get($code, background-gist);
+    }
+}
+.left {
+    margin: 0;
+    float: left;
+    width: 45%;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+.right {
+    margin: 0;
+    float: right;
+    width: 45%;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+}
