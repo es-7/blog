@@ -2,6 +2,12 @@
 	<div class="nav-header">
 		<div class="navbar-logo">
 			 <a href="<%- url_for() %>" class="logo"><%= config.title %></a>
+			<span id="busuanzi_container_site_pv" style="color:#ccc;padding-left:20px;font-size: 14px;display:none;">
+				本站总访问量100<span id="busuanzi_value_site_pv"></span>次
+			</span>
+			<span id="busuanzi_container_site_uv" style="color:#ccc;padding-left:20px;font-size: 14px;display:none;">
+			本站访客数50<span id="busuanzi_value_site_uv"></span>人次
+			</span>
 		</div>
 		<ul class="navbar-nav">
 			<% for (var name in theme.menu){ %>

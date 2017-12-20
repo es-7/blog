@@ -2,6 +2,7 @@
 <html lang="en">
 <%- partial('_partial/head') %>
 <body>
+<script src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 	<%- partial('_partial/header') %>
 	<div class="main-container">
     	<%- body %>
@@ -14,5 +15,12 @@
 	
 	<!--comment js-->
 	<%- partial('_scripts/comment') %>
+    <script>
+		window.addEventListener('load',function(){
+		    setTimeout(function(){
+                document.querySelector('#busuanzi_container_site_pv').style.display = '';
+			},1000)
+		},false)
+	</script>
 </body>
 </html>

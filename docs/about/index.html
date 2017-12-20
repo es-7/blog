@@ -24,10 +24,17 @@
 	<link rel="stylesheet" href="/blog/css/style.css">
 </head>
 <body>
+<script src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 	<div class="header">
 	<div class="nav-header">
 		<div class="navbar-logo">
 			 <a href="/blog/" class="logo">烬王的技术博客</a>
+			<span id="busuanzi_container_site_pv" style="color:#ccc;padding-left:20px;font-size: 14px;display:none;">
+				本站总访问量100<span id="busuanzi_value_site_pv"></span>次
+			</span>
+			<span id="busuanzi_container_site_uv" style="color:#ccc;padding-left:20px;font-size: 14px;display:none;">
+			本站访客数50<span id="busuanzi_value_site_uv"></span>人次
+			</span>
 		</div>
 		<ul class="navbar-nav">
 			
@@ -100,5 +107,12 @@
 	
     
 
+    <script>
+		window.addEventListener('load',function(){
+		    setTimeout(function(){
+                document.querySelector('#busuanzi_container_site_pv').style.display = '';
+			},1000)
+		},false)
+	</script>
 </body>
 </html>
