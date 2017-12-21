@@ -9,12 +9,12 @@ profile:
   social:
     github: https://github.com/buhuo00
     zhihu: https://www.zhihu.com/people/liu-deng-42-20/activities
-    email: 593265790@qq.com
+    email: 1054576070@qq.com
 
 #site 
 site:
-  description: 提供前端，javaScript，Canvas，WebGL，可视化教程学习
-  keywords: javaScript,CSS,Canvas,WebGL,前端,CSS3,不惑的技术博客
+  description: javascript，html，css
+  keywords: javascript,css,烬王的技术博客
   favicon: /favicon.png
   
 #Comment
@@ -26,3 +26,4 @@ rss: atom.xml
 
 # Version
 version: 2.0.0
+

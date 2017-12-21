@@ -2,10 +2,10 @@
     <% if (post.prev || post.next){ %>
         <div class="page-nav">
             <% if (post.prev){ %>
-                <a class="prev-link" href="<%- url_for(post.prev.path) %>"><% if (post.prev.title){ %> <%= post.prev.title %> <% } %></a>
+                <a class="prev-link" href="<%- url_for(post.prev.path) %>">上一篇：<% if (post.prev.title){ %> <%= post.prev.title %> <% } %></a>
             <% } %>
             <% if (post.next){ %>
-                <a class="next-link" href="<%- url_for(post.next.path) %>"><% if (post.next.title){ %> <%= post.next.title %> <% } %></a>
+                <a class="next-link" href="<%- url_for(post.next.path) %>">下一篇：<% if (post.next.title){ %> <%= post.next.title %> <% } %></a>
             <% } %>
         </div>
     <% } %>
