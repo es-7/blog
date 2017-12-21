@@ -6,7 +6,7 @@ date: 2015-07-18
    **引擎**一词总让人感觉很高端的样子，其实归根结底也只是处理字符串的一种方式而已。
    本文总结了3种实现模板引擎的方式，最后将逐步实现一个类似于 underscore.template 的模板插件。
  <!--more-->  
-### 一、replace模板   
+### 一、replace模板    
 
 replace 是字符串提供的一个超级强大的方法，这里举例介绍简单的使用。
   * 一参可为 `字符串` 或 `正则`:
@@ -48,7 +48,7 @@ replace 是字符串提供的一个超级强大的方法，这里举例介绍简
 // trim
 const trim = str => str.replace(/(^\s*)|(\s*$)/g, '')
 
-trim('  abc    ') // 'abc'
+trim('  abc   ') // 'abc'
 
 // format
 const format = str =>
