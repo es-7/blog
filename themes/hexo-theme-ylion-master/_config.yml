@@ -155,7 +155,7 @@ leancloud:
   enable: true
   className: "BlogCounter"
   app_id: qNSsFQt9TtbIzEBBemL6nWYr-gzGzoHsz
-  app_key: lgV0hrtXOyVQ57z9Fjq7YV8X
+  app_key: NWtDiuA0sfLK1CGS5HEW60OQ
   region:
   limits: 10
 
