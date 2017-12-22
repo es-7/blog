@@ -1,75 +1,220 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!-- description -->
-	
-		<meta name="description" content="javascript，html，css"/>
-	
-	<!-- keywords -->
-	
-		<meta name="keywords" content="javascript,css,烬王的技术博客" />
-	
-	
-	
-	<title>实现前端模板引擎-烬王的技术博客</title>
-	
-	<!-- favicon -->
-	
-		<link rel="icon" href="/favicon.png" type="image/x-icon">
-	
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable"  content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    
+    
+    <!--Simple SEO-->
 
-	<!-- css -->
-	<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="robots" content=all />
+<meta name="google" content=all />
+<meta name="googlebot" content=all />
+<meta name="verify" content=all />
+    <!--Title-->
+
+<title>实现前端模板引擎 | 烬王的技术博客</title>
+
+<link rel="alternate" href="/atom.xml" title="烬王的技术博客" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+<link rel="stylesheet" href="/blog/css/base.css">
+<link rel="stylesheet" href="/blog/css/pages/post.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/blog/css/thirdParty/highlight/github.css">
+<link rel="stylesheet" href="/blog/css/pages/comments.css">
+
+    <!--script-->
+
+
+<script src="http://cdn1.lncld.net/static/js/3.2.1/av-min.js"></script>
+<script>
+  var appId = "qNSsFQt9TtbIzEBBemL6nWYr-gzGzoHsz";
+  var appKey = "lgV0hrtXOyVQ57z9Fjq7YV8X";
+  var region = "";
+  AV.init({
+    appId: appId,
+    appKey: appKey,
+    region: region
+  });
+</script>
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>-->
+
+
+<script src="/blog/js/thirdParty/gitment.browser.min.js"></script>
+<script>
+  var labels = "blog,gitment";
+  labels = labels.split(",");
+  var gitment = new Gitment({
+    id: window.location.pathname,
+    owner: "GeekaholicLin",
+    repo: "geekaholiclin.github.io",
+    oauth: {
+      client_id: "aa2215dfc8ee944d1205",
+      client_secret: "77cd2afa5d161bc0ab04639ed81300d808c6e22b"
+    },
+    perPage: "20",
+    labels: labels
+  });
+</script>
+
+    
+    
 </head>
-<body>
-<script src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-	<div class="header">
-	<div class="nav-header">
-		<div class="navbar-logo">
-			 <a href="/blog/" class="logo">烬王的技术博客</a>
-			<span id="busuanzi_container_site_pv" style="color:#ccc;padding-left:20px;font-size: 14px;display:none;">
-				本站总访问量100<span id="busuanzi_value_site_pv"></span>次
-			</span>
-			<span id="busuanzi_container_site_uv" style="color:#ccc;padding-left:20px;font-size: 14px;display:none;">
-			本站访客数50<span id="busuanzi_value_site_uv"></span>人次
-			</span>
-		</div>
-		<ul class="navbar-nav">
-			
-          		<li class="nav-item">
-					<a class="main-nav-link" href="/blog/">首页</a>
-				</li>
-			
-          		<li class="nav-item">
-					<a class="main-nav-link" href="/blog/archives">归档</a>
-				</li>
-			
-          		<li class="nav-item">
-					<a class="main-nav-link" href="/blog/about">关于</a>
-				</li>
-			
-			
-				<li class="nav-item">
-					<a class="main-nav-link" href="/blog/atom.xml">RSS</a>
-				</li>
-			
-		</ul>
-	</div>
+
+<body id="normal">
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<style>
+    header{ top: 71px; position: absolute!important;}
+    #container{padding-top: 151px!important;}
+</style>
+<div style="position:fixed;z-index:9999;left:0;top:0;width:100%;height:70px;background-color:#e0e0e0;color:#396CA5;border-bottom:1px solid #cecece;text-align:center;line-height:70px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<div id="wrap">
+    <header  style="position: absolute;" >
+    <div id="site-meta">
+        <a href="/blog/" id="logo">
+            <h1 class="title">烬王的技术博客</h1>
+        </a>
+        
+    </div>
+    <ul id="nav">
+        
+            <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+        
+            <li><a href="/atom.xml"><i class="fa fa-rss"></i>RSS</a></li>
+        
+        <li id="search"><a href="javascript:void(0)"><i class="fa fa-search"></i>搜索</a></li>
+    </ul>
+</header>
+
+    <div id="container">
+        
+<ul id="sidebar">
+    
+    
+<li class="widget notification">
+    <i class="fa fa-bell-o"></i>
+    <div>
+        
+<p>主题ylion v0.0.0版本即将上线，敬请期待~！
+主题作者：<a href="https://github.com/GeekaholicLin"
+title="fork me" target="_blank">Geekaholic</a></p>
+    </div>
+</li>
+
+    
+    
+
+    
+    
+<li class="widget widget-normal archive">
+  <h3 class="fa fa-archive widget-title">归档</h3>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/08/"><i class="fa" aria-hidden="true">八月 2015</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/07/"><i class="fa" aria-hidden="true">七月 2015</i></a><span class="archive-list-count">2</span></li></ul>
+</li>
+
+
+    
+    
+<li class="widget widget-normal popular-posts" id="popular-posts">
+    <h3 class="fa fa-thermometer-3 widget-title">热门文章</h3>
+    <ul id="popular-content">
+        <li class="load-first"><i class="fa fa-spinner fa-pulse"></i></li>
+    </ul>
+</li>
+
+    
+    
+
+    
+    
+<li class="widget widget-normal friends-link">
+    <h3 class="fa fa-globe widget-title">友链</h3><br/>
+
+    
+        <a href="http://geekaholiclin.github.io" class="fa" target="_blank">主题作者</a>
+
+    
+
+</li>
+
+    
+</ul>
+
+
+        <div id="main">
+    <article id="post">
+        <div id="post-header">
+
+            <h1 id="实现前端模板引擎">
+                
+                实现前端模板引擎
+                
+            </h1>
+            <div class="article-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+        <span>null</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+         <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            null
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta ">2015/07/18</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+            <i class="fa fa-thermometer-three-quarters"></i>
+        <span class="hits hits-meta " data-leadcloud-title="实现前端模板引擎"
+              data-leadcloud-url="/blog/2015/07/18/template/"><i class="fa fa-spinner fa-spin"></i></span>
+    </span>
+    
+    
 </div>
-	<div class="main-container">
-    	<div class="post-container">
-	<div class="post-title-info">
-		<div class="post-title">
-			<h2 class="title">实现前端模板引擎</h2>
-		</div>
-		<div class="post-meta">
-			
-			<span class="post-time">2015-07-18</span>
-		</div>
-	</div>
-	<div class="post-content"><p>   前端模板引擎相信大家都不会陌生了吧，尤其是注重前后端分离的今天(除非你还在用拼接字符串)。<br>   <strong>引擎</strong>一词总让人感觉很高端的样子，其实归根结底也只是处理字符串的一种方式而已。<br>   本文总结了3种实现模板引擎的方式，最后将逐步实现一个类似于 underscore.template 的模板插件。<br> <a id="more"></a>  </p>
+
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>888</strong>天之前发表，文中内容可能已经过时。如有疑问，请在评论区留言。
+            </p>
+            
+        </div>
+        
+        <div id="post-body">
+            <p>   前端模板引擎相信大家都不会陌生了吧，尤其是注重前后端分离的今天(除非你还在用拼接字符串)。<br>   <strong>引擎</strong>一词总让人感觉很高端的样子，其实归根结底也只是处理字符串的一种方式而已。<br>   本文总结了3种实现模板引擎的方式，最后将逐步实现一个类似于 underscore.template 的模板插件。<br> <a id="more"></a>  </p>
 <h3 id="一、replace模板"><a href="#一、replace模板" class="headerlink" title="一、replace模板"></a>一、replace模板</h3><p>replace 是字符串提供的一个超级强大的方法，这里举例介绍简单的使用。</p>
 <ul>
 <li>一参可为 <code>字符串</code> 或 <code>正则</code>:<br>  ○ 为正则时有两种情况: <code>普通匹配模式</code> 和 <code>全局匹配模式</code>:<br>  ■ 全局匹配模式下，若二参为函数，则该函数在每次匹配时都会被调用    </li>
@@ -143,69 +288,170 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Filters = &#123;</span><br><span class="line">    upper: <span class="function"><span class="params">str</span> =&gt;</span> str.toUpperCase(),</span><br><span class="line">    lower: <span class="function"><span class="params">str</span> =&gt;</span> str.toLowerCase(),</span><br><span class="line">    reverse: <span class="function"><span class="params">str</span> =&gt;</span> str.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>),</span><br><span class="line">    <span class="built_in">escape</span>: <span class="function"><span class="params">str</span> =&gt;</span> str.replace(<span class="regexp">/&amp;(?!\w+;)/g</span>, <span class="string">'&amp;amp;'</span>)</span><br><span class="line">            .replace(<span class="regexp">/&lt;/g</span>, <span class="string">'&amp;lt;'</span>)</span><br><span class="line">            .replace(<span class="regexp">/&gt;/g</span>, <span class="string">'&amp;gt;'</span>)</span><br><span class="line">            .replace(<span class="regexp">/"/g</span>, <span class="string">'&amp;quot;'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Tpl</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span> (config=&#123;&#125;) &#123;</span><br><span class="line">        <span class="keyword">const</span> defaultConfig = &#123;</span><br><span class="line">            signs: &#123;</span><br><span class="line">                varSign:       [<span class="string">'&#123;&#123;'</span>, <span class="string">'&#125;&#125;'</span>],    <span class="comment">// 变量/表达式/过滤器</span></span><br><span class="line">            	evalSign:      [<span class="string">'&#123;#'</span>, <span class="string">'#&#125;'</span>],    <span class="comment">// 语句</span></span><br><span class="line">                endEvalSign:   [<span class="string">'&#123;/#'</span>, <span class="string">'#&#125;'</span>],   <span class="comment">// 语法模式结束语句</span></span><br><span class="line">                commentSign:   [<span class="string">'&lt;!--'</span>, <span class="string">'--&gt;'</span>], <span class="comment">// 普通注释</span></span><br><span class="line">                noCommentSign: [<span class="string">'&#123;@'</span>, <span class="string">'@&#125;'</span>]     <span class="comment">// 忽略注释</span></span><br><span class="line">            &#125;,</span><br><span class="line">            syntax: <span class="literal">false</span>                       <span class="comment">// 语法模式</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.config = <span class="built_in">Object</span>.assign(&#123;&#125;, defaultConfig, config)</span><br><span class="line">        <span class="comment">// ['&#123;&#123;', '&#125;&#125;'] =&gt; /&#123;&#123;([\\s\\S]+?)&#125;&#125;/g 构造正则</span></span><br><span class="line">        <span class="built_in">Object</span>.keys(<span class="keyword">this</span>.config.signs).forEach(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.config.signs[key].splice(<span class="number">1</span>, <span class="number">0</span>, <span class="string">'(.+?)'</span>)</span><br><span class="line">            <span class="keyword">this</span>.config.signs[key] = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="keyword">this</span>.config.signs[key].join(<span class="string">''</span>), <span class="string">'g'</span>)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 语法模式</span></span><br><span class="line">    _syntax (str) &#123;</span><br><span class="line">        <span class="keyword">const</span> arr = str.trim().split(<span class="regexp">/\s+/</span>)</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'1111:  '</span>+arr)</span><br><span class="line">        <span class="keyword">let</span> exp = str</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (arr[<span class="number">0</span>] === <span class="string">'if'</span>) &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">'2222:  '</span>+arr.slice(<span class="number">1</span>).join(<span class="string">' '</span>))</span><br><span class="line">            <span class="comment">// if (xx) &#123;</span></span><br><span class="line">            exp = <span class="string">`if ( <span class="subst">$&#123;arr.slice(<span class="number">1</span>).join(<span class="string">' '</span>)&#125;</span> ) &#123;`</span></span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[<span class="number">0</span>] === <span class="string">'else'</span>) &#123;</span><br><span class="line">            <span class="comment">// &#125; else &#123;</span></span><br><span class="line">            exp = <span class="string">'&#125; else &#123;'</span></span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[<span class="number">0</span>] === <span class="string">'elif'</span>) &#123;</span><br><span class="line">            <span class="comment">// &#125; else if (xx) &#123;</span></span><br><span class="line">            exp = <span class="string">`&#125; else if ( <span class="subst">$&#123;arr.slice(<span class="number">1</span>).join(<span class="string">' '</span>)&#125;</span> ) &#123;`</span></span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[<span class="number">0</span>] === <span class="string">'each'</span>) &#123;</span><br><span class="line">            <span class="comment">// for (var index = 0, len = xx.length; index &lt; len; index++) &#123;</span></span><br><span class="line">            exp = <span class="string">`for (var index = 0, len = <span class="subst">$&#123;arr[<span class="number">1</span>]&#125;</span>.length; index &lt; len; index++)</span></span><br><span class="line"><span class="string">&#123;var item = <span class="subst">$&#123;arr[<span class="number">1</span>]&#125;</span>[index]`</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> exp</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 模板解析</span></span><br><span class="line">    _compile (str, data)&#123;</span><br><span class="line">		<span class="keyword">const</span> tpl = str.replace(<span class="regexp">/\n/g</span>, <span class="string">''</span>)</span><br><span class="line">            <span class="comment">// 注释</span></span><br><span class="line">    		.replace( <span class="keyword">this</span>.config.signs.noCommentSign, () =&gt; <span class="string">''</span>)</span><br><span class="line">    		.replace( <span class="keyword">this</span>.config.signs.commentSign, (match, p) =&gt; &#123;</span><br><span class="line">                <span class="keyword">const</span> exp = p.replace(<span class="regexp">/[\&#123;\&lt;\&#125;\&gt;]/g</span>, </span><br><span class="line">                match =&gt; <span class="string">`&amp;*&amp;<span class="subst">$&#123;match.charCodeAt()&#125;</span>&amp;*&amp;`</span>)</span><br><span class="line">    			<span class="keyword">return</span> <span class="string">`'+'&lt;!-- <span class="subst">$&#123;exp&#125;</span> --&gt;'+'`</span></span><br><span class="line">    		&#125;)</span><br><span class="line">            <span class="comment">// 变量/表达式</span></span><br><span class="line">    		.replace( <span class="keyword">this</span>.config.signs.varSign, (match, p) =&gt; &#123;</span><br><span class="line">                <span class="keyword">const</span> filterIndex = p.indexOf(<span class="string">'|'</span>)</span><br><span class="line">                <span class="keyword">let</span> val = p</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (filterIndex !== <span class="number">-1</span>) &#123; <span class="comment">// 有过滤器</span></span><br><span class="line">                    <span class="keyword">const</span></span><br><span class="line">                        arr = val.split(<span class="string">'|'</span>).map(<span class="function"><span class="params">s</span> =&gt;</span> s.trim()),</span><br><span class="line">                        filters = arr.slice(<span class="number">1</span>) || [],</span><br><span class="line">                        oldVal  = arr[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">                    val = filters.reduce(<span class="function">(<span class="params">curVal, filterName</span>) =&gt;</span> &#123;</span><br><span class="line">                        <span class="keyword">if</span> ( ! Filters[filterName] ) &#123;</span><br><span class="line">                            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">`没有 <span class="subst">$&#123;filterName&#125;</span> 过滤器`</span>)</span><br><span class="line">                            <span class="keyword">return</span></span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">return</span> <span class="string">`Filters['<span class="subst">$&#123;filterName&#125;</span>'](<span class="subst">$&#123;curVal&#125;</span>)`</span></span><br><span class="line">                    &#125;, oldVal)</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="built_in">console</span>.log(val)</span><br><span class="line">                <span class="keyword">return</span> <span class="string">`'+(<span class="subst">$&#123;val&#125;</span>)+'`</span></span><br><span class="line">            &#125;)</span><br><span class="line">            <span class="comment">// 语句</span></span><br><span class="line">    		.replace( <span class="keyword">this</span>.config.signs.evalSign, (match, p) =&gt; &#123;</span><br><span class="line">                <span class="keyword">let</span>  exp = p.replace(<span class="string">'&amp;gt;'</span>, <span class="string">'&gt;'</span>).replace(<span class="string">'&amp;lt;'</span>, <span class="string">'&lt;'</span>)</span><br><span class="line">                                           <span class="comment">// 语法模式</span></span><br><span class="line">                exp = <span class="keyword">this</span>.config.syntax ? <span class="keyword">this</span>._syntax(exp) : exp</span><br><span class="line">    			<span class="keyword">return</span> <span class="string">`'; <span class="subst">$&#123;exp&#125;</span>; tpl += '`</span></span><br><span class="line">    		&#125;)</span><br><span class="line">            <span class="comment">// 语法模式(结束标签)</span></span><br><span class="line">            .replace( <span class="keyword">this</span>.config.signs.endEvalSign, () =&gt; <span class="string">"'&#125; tpl += '"</span>)</span><br><span class="line">            .replace(<span class="regexp">/\&amp;\*\&amp;(.*?)\&amp;\*\&amp;/g</span>, (match, p) =&gt;  <span class="built_in">String</span>.fromCharCode(p))</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">'data'</span>, <span class="string">`var tpl='<span class="subst">$&#123;tpl&#125;</span>'; return tpl;`</span>)(data)</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">// 入口</span></span><br><span class="line">    compile (tplStr, data) &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>._compile(tplStr, data)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">            <span class="built_in">console</span>.warn(err)</span><br><span class="line">            <span class="built_in">console</span>.trace()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">tpl</span> (<span class="params">config</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Tpl(config)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>跑代码测试一下吧！！</p>
 <p></p><p data-height="265" data-theme-id="0" data-slug-hash="VyjNNq" data-default-tab="html,result" data-user="jinwang" data-embed-version="2" data-pen-title="VyjNNq" class="codepen">See the Pen <a href="https://codepen.io/jinwang/pen/VyjNNq/" target="_blank" rel="noopener">VyjNNq</a> by  石其龙 (<a href="https://codepen.io/jinwang" target="_blank" rel="noopener">@jinwang</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.</p><p></p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></div>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="http://example.com/author.jpg" alt="avatar"/>
+                
+                <a href="javascript:void(0)" class="high-song">high起来 &#128541;</a>
+                
+                
+                <a href="javascript:void(0)" class="donate fa">赠我一杯 &#128536;</a>
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>
+                  
+                  作者:
+                  
+                    
+                    <a href="/about.html">石其龙</a>
+                </li>
+                
+                <li>发表日期: <span>2015-07-18  00:00:00</span></li>
+                
+                <li>最后编辑日期: <span>2017-12-22  14:24:12</span></li>
+                
+                <li class="post-category">
+                    文章分类:
+                    
+                </li>
+                <li class="post-tags">
+                    文章标签:
+                    
+                </li>
+                
+                <li> 版权声明: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+</a></li>
+                
+            </ul>
+            <div id="donate-wrap">
+                
+                
+                
+                <img src="http://example.com/alipay.jpg" alt="支付宝付款" class="donate-img">
+                
+                <img src="http://example.com/wechat.png" alt="微信付款" class="donate-img">
+                
+                
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
+        
+        <a href="/blog/2015/08/02/whyUseFrame/" class="pre-post fa fa-caret-left">为何前端要使用框架？</a>
+        
+        
+        <a href="/blog/2015/07/03/inheirt/" class="next-post fa">js原生继承</a>
+        
+    </div>
+    
+    <div id="comments">
+        
+
+<script>
+  gitment.render(document.getElementById("comments"));
+</script>
+
+
+
+    </div>
+    
 </div>
 
+
+    </div>
+    <footer id="footer">
     
-        <div class="page-nav">
-            
-                <a class="prev-link" href="/blog/2015/08/02/whyUseFrame/">上一篇： 为何前端要使用框架？ </a>
-            
-            
-                <a class="next-link" href="/blog/2015/07/03/inheirt/">下一篇： js原生继承 </a>
-            
+    <div class="social">
+        
+        <a href="https://www.example1.com" class="fa fa-free-code-camp" target="_blank" title="freecodecamp"></a>
+        
+        <a href="https://www.example2.com" class="fa fa-github" target="_blank" title="Follow me~"></a>
+        
+    </div>
+    
+    <div>
+        
+        <a href="/blog/" class="copyright-links">石其龙</a>&copy;2015 - 2017.All Rights
+        Reserved.
+    </div>
+    <p>Powered by <a href="https://hexo.io" class="copyright-links" target="_blank">Hexo</a> | Theme by <a
+                href="https://github.com/GeekaholicLin" class="copyright-links" target="_blank">GeekaholicLin</a>
+    </p>
+    
+    
+    <p>
+        <span id="busuanzi_container_site_uv" class="fa fa-bar-chart">
+        欢迎第<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>位小伙伴~
+        </span>
+    </p>
+    
+</footer>
+
+</div>
+    <ul id="tools">
+    <li class="totop-btn fa fa-angle-up"></li>
+    <li class="exchange-btn fa fa-exchange"></li>
+  
+    <li class="toc-btn fa fa-list-ul"></li>
+    
+    
+
+    
+    <li class="comment-btn fa fa-comments-o">
+        <a href="#comments" title="comments"></a>
+    </li>
+    
+</ul>
+<p id="process"></p>
+<div id="search-overlay">
+    <div class="search-area-wrap">
+        <div id="search-area">
+            <div class="input-wrap focus">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input id="search-input" autofocus autocomplete="off" type="text"
+                       placeholder="search this website..."/>
+            </div>
+            <ul id="search-result">
+                <li class="load-first"><i class="fa fa-spinner fa-pulse"></i></li>
+            </ul>
         </div>
-    
-
-
-	</div>
-	<!--commemt layout-->
-	
-    
-    
-        <div class="comments-section">
-            <div id="lv-container" data-id="city" data-uid="MTAyMC8zMjQ1MS85MDEy">
-                <script type="text/javascript">
-                    (function(d, s) {
-                        var j, e = d.getElementsByTagName(s)[0];
-                    
-                        if (typeof LivereTower === 'function') { return; }
-                    
-                        j = d.createElement(s);
-                        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                        j.async = true;
-                    
-                        e.parentNode.insertBefore(j, e);
-                    })(document, 'script');
-                    </script>
-                    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-            </div>              
-        </div>
-    
-
-
-	<!--footer layout-->
-	<div class="footer">
-    <div class="footer-container">
-        <p>
-             ©2017 烬王的技术博客 powered by Hexo and 
-            <a href="https://github.com/buhuo00/hexo-theme-grace">hexo-theme-grace</a>
-        </p>
-        <p>Hosted by <a href="https://pages.coding.me">Coding Pages</a></p>
     </div>
 </div>
-	
-	<!--comment js-->
-	
-    
 
-    <script>
-		window.addEventListener('load',function(){
-		    setTimeout(function(){
-                document.querySelector('#busuanzi_container_site_pv').style.display = '';
-			},1000)
-		},false)
-		
-	</script>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、replace模板"><span class="toc-number">1.</span> <span class="toc-text"><a href="#&#x4E00;&#x3001;replace&#x6A21;&#x677F;" class="headerlink" title="&#x4E00;&#x3001;replace&#x6A21;&#x677F;"></a>&#x4E00;&#x3001;replace&#x6A21;&#x677F;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#replace模板原理："><span class="toc-number">1.1.</span> <span class="toc-text"><a href="#replace&#x6A21;&#x677F;&#x539F;&#x7406;&#xFF1A;" class="headerlink" title="replace&#x6A21;&#x677F;&#x539F;&#x7406;&#xFF1A;"></a><strong>replace&#x6A21;&#x677F;&#x539F;&#x7406;</strong>&#xFF1A;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#实现"><span class="toc-number">1.2.</span> <span class="toc-text"><a href="#&#x5B9E;&#x73B0;" class="headerlink" title="&#x5B9E;&#x73B0;:"></a><strong>&#x5B9E;&#x73B0;</strong>:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、es6模板字符串"><span class="toc-number">2.</span> <span class="toc-text"><a href="#&#x4E8C;&#x3001;es6&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;" class="headerlink" title="&#x4E8C;&#x3001;es6&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;"></a>&#x4E8C;&#x3001;es6&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、Function模板"><span class="toc-number">3.</span> <span class="toc-text"><a href="#&#x4E09;&#x3001;Function&#x6A21;&#x677F;" class="headerlink" title="&#x4E09;&#x3001;Function&#x6A21;&#x677F;"></a>&#x4E09;&#x3001;Function&#x6A21;&#x677F;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#拓展-分步实现模板引擎"><span class="toc-number">3.1.</span> <span class="toc-text"><a href="#&#x62D3;&#x5C55;-&#x5206;&#x6B65;&#x5B9E;&#x73B0;&#x6A21;&#x677F;&#x5F15;&#x64CE;" class="headerlink" title="&#x62D3;&#x5C55;:&#x5206;&#x6B65;&#x5B9E;&#x73B0;&#x6A21;&#x677F;&#x5F15;&#x64CE;"></a><strong>&#x62D3;&#x5C55;</strong>:&#x5206;&#x6B65;&#x5B9E;&#x73B0;&#x6A21;&#x677F;&#x5F15;&#x64CE;</span></a></li></ol></li></ol>
+
+
+    <script src="/blog/js/highsong.js"></script>
+
+
+
+<script src="/blog/js/search.js"></script>
+<script type="text/javascript">
+    //theme config datas
+    var copyrightObj = {};
+    copyrightObj.enable = 'true';
+    copyrightObj.triggerCopyLength = '200';
+    copyrightObj.appendText = '商业转载请联系作者获得授权,非商业转载请注明出处 © example';
+    var leancloudObj = {};
+    leancloudObj.enable = 'true';
+    leancloudObj.className = 'BlogCounter';
+    leancloudObj.limits = '10';
+</script>
+<script type="text/javascript">
+    var search = {};
+    var search_path = "search.xml";
+    if (!search_path) {
+        search_path = "search.xml";
+    }
+    search.path = "/blog/" + search_path;
+    search.func =  _ajax.init();
+</script>
+<script src="/blog/js/app.js"></script>
+
+
 </body>
 </html>

@@ -1,154 +1,432 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!-- description -->
-	
-		<meta name="description" content="javascript，html，css"/>
-	
-	<!-- keywords -->
-	
-		<meta name="keywords" content="javascript,css,烬王的技术博客" />
-	
-	
-	
-	<title>javascript，html，css-烬王的技术博客</title>
-	
-	<!-- favicon -->
-	
-		<link rel="icon" href="/favicon.png" type="image/x-icon">
-	
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable"  content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    
+    
+    <!--Simple SEO-->
 
-	<!-- css -->
-	<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="robots" content=all />
+<meta name="google" content=all />
+<meta name="googlebot" content=all />
+<meta name="verify" content=all />
+    <!--Title-->
+
+<title>烬王的技术博客</title>
+
+<link rel="alternate" href="/atom.xml" title="烬王的技术博客" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+<link rel="stylesheet" href="/blog/css/base.css">
+<link rel="stylesheet" href="/blog/css/pages/article-exp.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/blog/css/thirdParty/highlight/github.css">
+
+    <!--script-->
+
+
+<script src="http://cdn1.lncld.net/static/js/3.2.1/av-min.js"></script>
+<script>
+  var appId = "qNSsFQt9TtbIzEBBemL6nWYr-gzGzoHsz";
+  var appKey = "lgV0hrtXOyVQ57z9Fjq7YV8X";
+  var region = "";
+  AV.init({
+    appId: appId,
+    appKey: appKey,
+    region: region
+  });
+</script>
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>-->
+
+
+    
+    
 </head>
-<body>
-<script src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-	<div class="header">
-	<div class="nav-header">
-		<div class="navbar-logo">
-			 <a href="/blog/" class="logo">烬王的技术博客</a>
-			<span id="busuanzi_container_site_pv" style="color:#ccc;padding-left:20px;font-size: 14px;display:none;">
-				本站总访问量100<span id="busuanzi_value_site_pv"></span>次
-			</span>
-			<span id="busuanzi_container_site_uv" style="color:#ccc;padding-left:20px;font-size: 14px;display:none;">
-			本站访客数50<span id="busuanzi_value_site_uv"></span>人次
-			</span>
-		</div>
-		<ul class="navbar-nav">
-			
-          		<li class="nav-item">
-					<a class="main-nav-link" href="/blog/">首页</a>
-				</li>
-			
-          		<li class="nav-item">
-					<a class="main-nav-link" href="/blog/archives">归档</a>
-				</li>
-			
-          		<li class="nav-item">
-					<a class="main-nav-link" href="/blog/about">关于</a>
-				</li>
-			
-			
-				<li class="nav-item">
-					<a class="main-nav-link" href="/blog/atom.xml">RSS</a>
-				</li>
-			
-		</ul>
-	</div>
-</div>
-	<div class="main-container">
-    	<div class="posts-container">
-	
-		<article class="rows">
-			<div class="post-info">
-				<h1 class="post-title">
-					<a class="title-link" href="/blog/2015/08/02/whyUseFrame/">为何前端要使用框架？</a>
-				</h1>
-				<div class="post-meta">
-					
-					<span class="time">2015-08-02</span>
-				</div>
-			</div>
-			<div class="post-content">
-				
-					<p><p>亲爱的各位观众看官好～最近在团队里组织了一次内容关于React的分享，然而后端有同学反映未能理解为何前端需要使用框架，框架究竟解决了什么问题。<br></p></p>	
-				
-			</div>
-			<a class="read-btn" href="/blog/2015/08/02/whyUseFrame/">阅读全文</a>
-		</article>
-	
-		<article class="rows">
-			<div class="post-info">
-				<h1 class="post-title">
-					<a class="title-link" href="/blog/2015/07/18/template/">实现前端模板引擎</a>
-				</h1>
-				<div class="post-meta">
-					
-					<span class="time">2015-07-18</span>
-				</div>
-			</div>
-			<div class="post-content">
-				
-					<p><p>   前端模板引擎相信大家都不会陌生了吧，尤其是注重前后端分离的今天(除非你还在用拼接字符串)。<br>   <strong>引擎</strong>一词总让人感觉很高端的样子，其实归根结底也只是处理字符串的一种方式而已。<br>   本文总结了3种实现模板引擎的方式，最后将逐步实现一个类似于 underscore.template 的模板插件。<br></p></p>	
-				
-			</div>
-			<a class="read-btn" href="/blog/2015/07/18/template/">阅读全文</a>
-		</article>
-	
-		<article class="rows">
-			<div class="post-info">
-				<h1 class="post-title">
-					<a class="title-link" href="/blog/2015/07/03/inheirt/">js原生继承</a>
-				</h1>
-				<div class="post-meta">
-					
-					<span class="time">2015-07-03</span>
-				</div>
-			</div>
-			<div class="post-content">
-				
-					<p><p>  js中的继承有多种实现方式，今天我们来分析一下各种继承的方式以及其优缺点。<br></p>	
-				
-			</div>
-			<a class="read-btn" href="/blog/2015/07/03/inheirt/">阅读全文</a>
-		</article>
-	
-</div>
 
+<body id="normal">
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<style>
+    header{ top: 71px; position: absolute!important;}
+    #container{padding-top: 151px!important;}
+</style>
+<div style="position:fixed;z-index:9999;left:0;top:0;width:100%;height:70px;background-color:#e0e0e0;color:#396CA5;border-bottom:1px solid #cecece;text-align:center;line-height:70px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
 
-    <div class="page-nav">
+<div id="wrap">
+    <header >
+    <div id="site-meta">
+        <a href="/blog/" id="logo">
+            <h1 class="title">烬王的技术博客</h1>
+        </a>
         
-
+    </div>
+    <ul id="nav">
         
+            <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+        
+            <li><a href="/atom.xml"><i class="fa fa-rss"></i>RSS</a></li>
+        
+        <li id="search"><a href="javascript:void(0)"><i class="fa fa-search"></i>搜索</a></li>
+    </ul>
+</header>
+
+    <div id="container">
+        
+<ul id="sidebar">
+    
+    
+<li class="widget notification">
+    <i class="fa fa-bell-o"></i>
+    <div>
+        
+<p>主题ylion v0.0.0版本即将上线，敬请期待~！
+主题作者：<a href="https://github.com/GeekaholicLin"
+title="fork me" target="_blank">Geekaholic</a></p>
+    </div>
+</li>
+
+    
+    
+
+    
+    
+<li class="widget widget-normal archive">
+  <h3 class="fa fa-archive widget-title">归档</h3>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/08/"><i class="fa" aria-hidden="true">八月 2015</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/07/"><i class="fa" aria-hidden="true">七月 2015</i></a><span class="archive-list-count">2</span></li></ul>
+</li>
+
+
+    
+    
+<li class="widget widget-normal popular-posts" id="popular-posts">
+    <h3 class="fa fa-thermometer-3 widget-title">热门文章</h3>
+    <ul id="popular-content">
+        <li class="load-first"><i class="fa fa-spinner fa-pulse"></i></li>
+    </ul>
+</li>
+
+    
+    
+
+    
+    
+<li class="widget widget-normal friends-link">
+    <h3 class="fa fa-globe widget-title">友链</h3><br/>
+
+    
+        <a href="http://geekaholiclin.github.io" class="fa" target="_blank">主题作者</a>
+
+    
+
+</li>
+
+    
+</ul>
+
+
+        <ul id="main">
+    
+
+    
+    
+    
+    
+    
+    
+    
+    <li  class="article-excerpt-wrap stick" _href = "/blog/2015/08/02/whyUseFrame/">
+        <div class="article-img img-ajax" data-src= /blog/blog/2015/08/02/whyUseFrame/3.png>
+           <div class="loading-img"><i class="fa fa-pulse fa-spinner"></i></div>
+        </div>
+        <div class="article-excerpt">
+            
+            <a class="article-title-link" href="/blog/2015/08/02/whyUseFrame/">
+                <h2 class="article-title">为何前端要使用框架？</h2>
+            </a>
+            
+            <p class="article-content">
+                亲爱的各位观众看官好～最近在团队里组织了一次内容关于React的分享，然而后端有同学反映未能理解为何前端需要使用框架，框架究竟解决了什么问题。回想刚入坑前端的时候，也接触了一些Java，当了解到其实Java可以生成HTML模板之后，对前端的信仰几乎崩溃。既然后端就可以渲染前端的话，前端价值到底在哪？感觉页面就是随便切一下就行，根本没必要用框架，当时着实迷茫了很久。
+后来对前端领域接触深了，再经过大神的指点，总算是理解为何前端需要使用框架。根据自己的理解，再结合分享时后端同学的疑问，于是有了这篇文章。本文相对小白向，只是通过虚拟一个项目说明问题，还望各位大神不吝赐教。
+开始新项目
+产品： 来来来，新项目来啦。最近发现用户喜欢撸猫，我们来个在线云撸猫！页面要求有猫图，点一下计数加一点当撸了一次！多久能上线？？这个简单啊！
+
+
+厉害的我连jQuery都不用，原生上！
+12345678910...
+            </p>
+            <div class="article-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+        <span>null</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+         <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            null
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta ">2015/08/02</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+            <i class="fa fa-thermometer-three-quarters"></i>
+        <span class="hits hits-meta " data-leadcloud-title="为何前端要使用框架？"
+              data-leadcloud-url="/blog/2015/08/02/whyUseFrame/"><i class="fa fa-spinner fa-spin"></i></span>
+    </span>
+    
+    
+    <a href="/blog/2015/08/02/whyUseFrame/" class="read-article">阅读全文</a>
+    
+</div>
+
+        </div>
+        
+        <i class="fa  fa-bookmark"></i>
+        
+    </li>
+    
+    
+    <li  class="article-excerpt-wrap stick" _href = "/blog/2015/07/03/inheirt/">
+        <div class="article-img img-ajax" data-src= /blog/img/default-1.jpg>
+           <div class="loading-img"><i class="fa fa-pulse fa-spinner"></i></div>
+        </div>
+        <div class="article-excerpt">
+            
+            <a class="article-title-link" href="/blog/2015/07/03/inheirt/">
+                <h2 class="article-title">js原生继承</h2>
+            </a>
+            
+            <p class="article-content">
+                  js中的继承有多种实现方式，今天我们来分析一下各种继承的方式以及其优缺点。    
+原型链继承   首先介绍一下原型链的基本概念。   先来理解一下原型、构造函数和实例之间的关系。      
+
+每个构造函数都有一个原型对象（通过prototype属性）    
+原型对象都包含一个指向构造函数的指针（通过constructor属性）
+实例都包含一个指向原型对象的内部指针（通过隐式__proto__属性）
+
+   那么，若原型对象被另一个原型的实例覆盖，则此时原型对象将包含一个指向另一个原型对象的指针。按照这样层层递进，就构成了实例与原型的链条。
+   这个概念可能不好理解，请看下面例子： 123456789101112131415161718192021222324252627282930313233/** * 父类 * @param &#123;any&#125; name *...
+            </p>
+            <div class="article-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+        <span>null</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+         <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            null
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta ">2015/07/03</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+            <i class="fa fa-thermometer-three-quarters"></i>
+        <span class="hits hits-meta " data-leadcloud-title="js原生继承"
+              data-leadcloud-url="/blog/2015/07/03/inheirt/"><i class="fa fa-spinner fa-spin"></i></span>
+    </span>
+    
+    
+    <a href="/blog/2015/07/03/inheirt/" class="read-article">阅读全文</a>
+    
+</div>
+
+        </div>
+        
+        <i class="fa  fa-bookmark"></i>
+        
+    </li>
+    
+    
+    <li  class="article-excerpt-wrap " _href = "/blog/2015/07/18/template/">
+        <div class="article-img img-ajax" data-src= http://localhost:4000/blog/2015/08/02/whyUseFrame/2.png>
+           <div class="loading-img"><i class="fa fa-pulse fa-spinner"></i></div>
+        </div>
+        <div class="article-excerpt">
+            
+            <a class="article-title-link" href="/blog/2015/07/18/template/">
+                <h2 class="article-title">实现前端模板引擎</h2>
+            </a>
+            
+            <p class="article-content">
+                   前端模板引擎相信大家都不会陌生了吧，尤其是注重前后端分离的今天(除非你还在用拼接字符串)。   引擎一词总让人感觉很高端的样子，其实归根结底也只是处理字符串的一种方式而已。   本文总结了3种实现模板引擎的方式，最后将逐步实现一个类似于 underscore.template 的模板插件。   
+一、replace模板replace 是字符串提供的一个超级强大的方法，这里举例介绍简单的使用。
+
+一参可为 字符串 或 正则:  ○ 为正则时有两种情况: 普通匹配模式 和 全局匹配模式:  ■ 全局匹配模式下，若二参为函数，则该函数在每次匹配时都会被调用    
+二参可为 字符串 或 一个用于生成字符串的函数:  ○ 当为字符串时:■ 可在字符串中使用 特殊替换字符 ($n ...)
+  ○ 当为函数时:■ 函数中不能用特殊替换字符
+■ 一参为正则匹配的文本
+■ 倒数第二参为匹配到...
+            </p>
+            <div class="article-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+        <span>null</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+         <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            null
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta ">2015/07/18</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+            <i class="fa fa-thermometer-three-quarters"></i>
+        <span class="hits hits-meta " data-leadcloud-title="实现前端模板引擎"
+              data-leadcloud-url="/blog/2015/07/18/template/"><i class="fa fa-spinner fa-spin"></i></span>
+    </span>
+    
+    
+    <a href="/blog/2015/07/18/template/" class="read-article">阅读全文</a>
+    
+</div>
+
+        </div>
+        
+    </li>
+    
+    
+
+</ul>
 
     </div>
+    <footer id="footer">
+    
+    <div class="social">
+        
+        <a href="https://www.example1.com" class="fa fa-free-code-camp" target="_blank" title="freecodecamp"></a>
+        
+        <a href="https://www.example2.com" class="fa fa-github" target="_blank" title="Follow me~"></a>
+        
+    </div>
+    
+    <div>
+        
+        <a href="/blog/" class="copyright-links">石其龙</a>&copy;2015 - 2017.All Rights
+        Reserved.
+    </div>
+    <p>Powered by <a href="https://hexo.io" class="copyright-links" target="_blank">Hexo</a> | Theme by <a
+                href="https://github.com/GeekaholicLin" class="copyright-links" target="_blank">GeekaholicLin</a>
+    </p>
+    
+    
+    <p>
+        <span id="busuanzi_container_site_uv" class="fa fa-bar-chart">
+        欢迎第<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>位小伙伴~
+        </span>
+    </p>
+    
+</footer>
 
-	</div>
-	<!--commemt layout-->
-	
+</div>
+    <ul id="tools">
+    <li class="totop-btn fa fa-angle-up"></li>
+    <li class="exchange-btn fa fa-exchange"></li>
+  
+    
 
-	<!--footer layout-->
-	<div class="footer">
-    <div class="footer-container">
-        <p>
-             ©2017 烬王的技术博客 powered by Hexo and 
-            <a href="https://github.com/buhuo00/hexo-theme-grace">hexo-theme-grace</a>
-        </p>
-        <p>Hosted by <a href="https://pages.coding.me">Coding Pages</a></p>
+    
+</ul>
+<p id="process"></p>
+<div id="search-overlay">
+    <div class="search-area-wrap">
+        <div id="search-area">
+            <div class="input-wrap focus">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input id="search-input" autofocus autocomplete="off" type="text"
+                       placeholder="search this website..."/>
+            </div>
+            <ul id="search-result">
+                <li class="load-first"><i class="fa fa-spinner fa-pulse"></i></li>
+            </ul>
+        </div>
     </div>
 </div>
-	
-	<!--comment js-->
-	
-    <script>
-		window.addEventListener('load',function(){
-		    setTimeout(function(){
-                document.querySelector('#busuanzi_container_site_pv').style.display = '';
-			},1000)
-		},false)
-		
-	</script>
+
+
+    <script src="/blog/js/highsong.js"></script>
+
+
+
+<script src="/blog/js/search.js"></script>
+<script type="text/javascript">
+    //theme config datas
+    var copyrightObj = {};
+    copyrightObj.enable = 'true';
+    copyrightObj.triggerCopyLength = '200';
+    copyrightObj.appendText = '商业转载请联系作者获得授权,非商业转载请注明出处 © example';
+    var leancloudObj = {};
+    leancloudObj.enable = 'true';
+    leancloudObj.className = 'BlogCounter';
+    leancloudObj.limits = '10';
+</script>
+<script type="text/javascript">
+    var search = {};
+    var search_path = "search.xml";
+    if (!search_path) {
+        search_path = "search.xml";
+    }
+    search.path = "/blog/" + search_path;
+    search.func =  _ajax.init();
+</script>
+<script src="/blog/js/app.js"></script>
+
+
 </body>
 </html>
