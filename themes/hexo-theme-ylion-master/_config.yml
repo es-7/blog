@@ -166,10 +166,10 @@ duoshuo_shortname:
 ### gitment
 gitment:
   enable: false
-  #owner: es-7
-  #repo: https://github.com/es-7/blog/issues
-  #client_id: 72ff58a71d57e18c515b
-  #client_secret: 51ca818e67a1e9234b5158b9a7e2a843b3ea8c93
+  owner: es-7
+  repo: https://github.com/es-7/blog/issues
+  client_id: 72ff58a71d57e18c515b
+  client_secret: 51ca818e67a1e9234b5158b9a7e2a843b3ea8c93
   labels: "blog,gitment"
   perPage: 20
   maxCommentHeight:
