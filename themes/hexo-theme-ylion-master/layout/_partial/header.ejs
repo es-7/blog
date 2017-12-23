@@ -9,6 +9,7 @@
     </div>
     <ul id="nav">
         <% theme.menu.forEach(function (item) {%>
+            <% console.log(item.url) %>
             <li><a href="<%- item.url%>"><i class="fa <%= item.icon%>"></i><%= __(item.page+'') %></a></li>
         <%})%>
         <li id="search"><a href="javascript:void(0)"><i class="fa fa-search"></i><%= __('search') %></a></li>
