@@ -36,18 +36,6 @@
     <!--script-->
 
 
-<script src="//cdn1.lncld.net/static/js/3.2.1/av-min.js"></script>
-<script>
-  var appId = "qNSsFQt9TtbIzEBBemL6nWYr-gzGzoHsz";
-  var appKey = "NWtDiuA0sfLK1CGS5HEW60OQ";
-  var region = "";
-  AV.init({
-    appId: appId,
-    appKey: appKey,
-    region: region
-  });
-</script>
-
 
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
@@ -84,7 +72,9 @@
         
             <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
         
-            <li><a href="/atom.xml"><i class="fa fa-rss"></i>RSS</a></li>
+            <li><a href="/blog/about.html"><i class="fa fa-user"></i>关于我</a></li>
+        
+            <li><a href="/blog/atom.xml"><i class="fa fa-rss"></i>RSS</a></li>
         
         <li id="search"><a href="javascript:void(0)"><i class="fa fa-search"></i>搜索</a></li>
     </ul>
@@ -99,14 +89,17 @@
     <i class="fa fa-bell-o"></i>
     <div>
         
-<p>主题ylion v0.0.0版本即将上线，敬请期待~！
-主题作者：<a href="https://github.com/GeekaholicLin"
-title="fork me" target="_blank">Geekaholic</a></p>
+<p>长太息以掩涕兮，哀吾生之多艰。路漫漫其修远兮，吾将上下而求索。</p>
     </div>
 </li>
 
     
     
+<li class="widget widget-normal category">
+    <h3 class="fa fa-th widget-title">分类</h3>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/web前端/"><i class="fa" aria-hidden="true">web前端</i></a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/web前端/基础/"><i class="fa" aria-hidden="true">基础</i></a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/web前端/框架/"><i class="fa" aria-hidden="true">框架</i></a><span class="category-list-count">1</span></li></ul></li></ul>
+</li>
+
 
     
     
@@ -118,15 +111,16 @@ title="fork me" target="_blank">Geekaholic</a></p>
 
     
     
-<li class="widget widget-normal popular-posts" id="popular-posts">
-    <h3 class="fa fa-thermometer-3 widget-title">热门文章</h3>
-    <ul id="popular-content">
-        <li class="load-first"><i class="fa fa-spinner fa-pulse"></i></li>
-    </ul>
+    
+    
+<li class="widget widget-normal tags">
+  <h3 class="fa fa-tags widget-title">标签云</h3>
+  <div class="tagcloud-content">
+    
+      <a href="/blog/tags/继承/" style="font-size: 0.14rem; color: #69c">继承</a> <a href="/blog/tags/模板引擎/" style="font-size: 0.14rem; color: #69c">模板引擎</a> <a href="/blog/tags/杂谈/" style="font-size: 0.14rem; color: #69c">杂谈</a>
+  </div>
 </li>
 
-    
-    
 
     
     
@@ -134,7 +128,7 @@ title="fork me" target="_blank">Geekaholic</a></p>
     <h3 class="fa fa-globe widget-title">友链</h3><br/>
 
     
-        <a href="http://geekaholiclin.github.io" class="fa" target="_blank">主题作者</a>
+        <a href="https://github.com/es-7" class="fa" target="_blank">主题作者</a>
 
     
 
@@ -157,7 +151,7 @@ title="fork me" target="_blank">Geekaholic</a></p>
     
     <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-        <span>null</span>
+        <span>框架</span>
     </span>
     
     
@@ -165,7 +159,7 @@ title="fork me" target="_blank">Geekaholic</a></p>
          <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            null
+            杂谈
             
         </span>
     </span>
@@ -176,12 +170,6 @@ title="fork me" target="_blank">Geekaholic</a></p>
         <span class="date-meta ">08/02</span>
     </span>
     
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="为何前端要使用框架？"
-              data-leadcloud-url="/blog/2015/08/02/whyUseFrame/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
     
     
 </div>
@@ -196,7 +184,7 @@ title="fork me" target="_blank">Geekaholic</a></p>
     
     <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-        <span>null</span>
+        <span>基础</span>
     </span>
     
     
@@ -204,7 +192,7 @@ title="fork me" target="_blank">Geekaholic</a></p>
          <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            null
+            模板引擎
             
         </span>
     </span>
@@ -215,12 +203,6 @@ title="fork me" target="_blank">Geekaholic</a></p>
         <span class="date-meta ">07/18</span>
     </span>
     
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="实现前端模板引擎"
-              data-leadcloud-url="/blog/2015/07/18/template/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
     
     
 </div>
@@ -235,7 +217,7 @@ title="fork me" target="_blank">Geekaholic</a></p>
     
     <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-        <span>null</span>
+        <span>基础</span>
     </span>
     
     
@@ -243,7 +225,7 @@ title="fork me" target="_blank">Geekaholic</a></p>
          <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            null
+            继承
             
         </span>
     </span>
@@ -254,12 +236,6 @@ title="fork me" target="_blank">Geekaholic</a></p>
         <span class="date-meta ">07/03</span>
     </span>
     
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="js原生继承"
-              data-leadcloud-url="/blog/2015/07/03/inheirt/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
     
     
 </div>
@@ -275,17 +251,9 @@ title="fork me" target="_blank">Geekaholic</a></p>
     </div>
     <footer id="footer">
     
-    <div class="social">
-        
-        <a href="https://www.example1.com" class="fa fa-free-code-camp" target="_blank" title="freecodecamp"></a>
-        
-        <a href="https://www.example2.com" class="fa fa-github" target="_blank" title="Follow me~"></a>
-        
-    </div>
-    
     <div>
         
-        <a href="/blog/" class="copyright-links">石其龙</a>&copy;2015 - 2017.All Rights
+        <a href="/blog/" class="copyright-links">烬王111</a>&copy;2015 - 2017.All Rights
         Reserved.
     </div>
     <p>Powered by <a href="https://hexo.io" class="copyright-links" target="_blank">Hexo</a> | Theme by <a
@@ -339,7 +307,7 @@ title="fork me" target="_blank">Geekaholic</a></p>
     copyrightObj.triggerCopyLength = '200';
     copyrightObj.appendText = '商业转载请联系作者获得授权,非商业转载请注明出处 © example';
     var leancloudObj = {};
-    leancloudObj.enable = 'true';
+    leancloudObj.enable = 'false';
     leancloudObj.className = 'BlogCounter';
     leancloudObj.limits = '10';
 </script>

@@ -38,6 +38,20 @@
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>说了半天，好像还没有说出为何前端需要使用框架。然而在复杂的项目中，你同意我通过MVC组织代码会比“面条式”代码好吗？如果同意的话，将我刚才代码中不变的部分抽象起来（组件通讯、报错处理等），想方设法提高渲染的性能（使用Virtual Dom），如果认为前端和其他不一样，数据和视图还是可以进行受控的交互(即MVVM)，那么整合起来，不就是一个框架了吗？<br>其实必须要承认，人的脑力是有限的，一款产品的需求可能是无限的。当这款产品已经让你无法掌握每个细节，每位参与开发的同学只能掌握局部细节，而其他部分只管调用是必然的事实。但是，如何确定其他部分可信，调用不会出bug呢？这时候就该使用框架了。框架较大程度上能约束与规范每位开发者的行为，不按照框架的规定很可能就会报错，这样多人协作就有了基本的保证。<br>但是，不是说使用框架就是最佳实践。当项目不复杂的时候（比如一次性的活动页），我们有足够能力去掌握项目的细节，那么使用框架反而不是好的选择。毕竟再好的框架在性能上都会有损失，而被框架的条条框框约束着，也总是令人不喜的。<br>简单地说：脑子不够，框架来凑；自己组织不好代码，靠框架来给我们组织。阅读至此殊为不易，感谢各位看官，希望本文对你有一点帮助，谢谢！</p>
 ]]></content>
         
+        <categories>
+            
+            <category> web前端 </category>
+            
+            <category> 框架 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 杂谈 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -120,6 +134,20 @@
 <p></p><p data-height="265" data-theme-id="0" data-slug-hash="VyjNNq" data-default-tab="html,result" data-user="jinwang" data-embed-version="2" data-pen-title="VyjNNq" class="codepen">See the Pen <a href="https://codepen.io/jinwang/pen/VyjNNq/" target="_blank" rel="noopener">VyjNNq</a> by  石其龙 (<a href="https://codepen.io/jinwang" target="_blank" rel="noopener">@jinwang</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.</p><p></p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>]]></content>
         
+        <categories>
+            
+            <category> web前端 </category>
+            
+            <category> 基础 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 模板引擎 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -199,6 +227,20 @@
 <p>如果项目中使用到ES6语法开发，推荐使用ES6继承</p>
 ]]></content>
         
+        <categories>
+            
+            <category> web前端 </category>
+            
+            <category> 基础 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 继承 </tag>
+            
+        </tags>
         
     </entry>
     

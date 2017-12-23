@@ -2,6 +2,9 @@
 title: js原生继承
 date: 2015-07-03
 top: 200
+img: http://localhost:4000/blog/2015/08/02/whyUseFrame/2.png
+categories: [web前端,基础]
+tags: [继承]
 ---
   js中的继承有多种实现方式，今天我们来分析一下各种继承的方式以及其优缺点。
  <!--more-->   

@@ -2,6 +2,9 @@
 title: 为何前端要使用框架？
 date: 2015-08-02
 top: 2000
+img: http://localhost:4000/blog/2015/08/02/whyUseFrame/1.png
+categories: [web前端,框架]
+tags: [杂谈]
 ---
 
 亲爱的各位观众看官好～最近在团队里组织了一次内容关于React的分享，然而后端有同学反映未能理解为何前端需要使用框架，框架究竟解决了什么问题。

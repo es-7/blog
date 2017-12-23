@@ -6,8 +6,11 @@ menu:
 - page: home
   url: /
   icon: fa-home
+- page: about
+  url: /blog/about.html
+  icon: fa-user
 - page: rss
-  url: /atom.xml
+  url: /blog/atom.xml
   icon: fa-rss
 
 ## favicon -- 网站图标位置{@favicon}
@@ -29,9 +32,7 @@ widgets:
 ### notification config --网站公告设置。支持 html 和 纯文本
 notification: |-
 
-            <p>主题ylion v0.0.0版本即将上线，敬请期待~！
-            主题作者：<a href="https://github.com/GeekaholicLin"
-            title="fork me" target="_blank">Geekaholic</a></p>
+            <p>长太息以掩涕兮，哀吾生之多艰。路漫漫其修远兮，吾将上下而求索。</p>
 
 ### categories-list config --文章分类设置{@cate_config:{@show_count:是否显示数字，@show_current: 是否高亮当前category}}
 cate_config:
@@ -60,7 +61,7 @@ tagcloud_config:
 ### friends' links settings
 ### 友链设置:{@links:[,,,]}
 links:
-- 主题作者: http://geekaholiclin.github.io
+- 主题作者: https://github.com/es-7
 
 
 
@@ -73,12 +74,12 @@ stick: true
 ## social config
 ## 社交功能设置 {@social:[url:地址,title:a标签的title,icon:显示图标],[]}
 social:
-- url: https://www.example1.com
-  title: freecodecamp
-  icon: fa-free-code-camp
-- url: https://www.example2.com
-  title: Follow me~
-  icon: fa-github
+#- url: https://www.example1.com
+ # title: freecodecamp
+  #icon: fa-free-code-camp
+#- url: https://www.example2.com
+ # title: Follow me~
+  #icon: fa-github
 
 
 ## custom content config
@@ -101,15 +102,13 @@ outdated_browser_text: '你使用的浏览器版本过低，为了你更好的�
 ### outdated post warning
 ### 文章过期提醒功能 {@warning:{days:临界天数,text:提醒文字/*%d为过期总天数占位符*/}}
 warning:
-  days: 300 #default is 300 days
+  days: 365 #default is 300 days
   text: '本文于%d天之前发表，文中内容可能已经过时。如有疑问，请在评论区留言。'
 
 ### index article excerpt
 ### 首页文章简介的图片
 ### 规则:Front-matter中的自定义'img'字段 > 文章内的图片(随机获取) > defaultImgs(随机获取)
 defaultImgs:
-  - http://localhost:4000/blog/2015/08/02/whyUseFrame/1.png
-  - http://localhost:4000/blog/2015/08/02/whyUseFrame/2.png
   - /img/default-1.jpg
 excerptLength: 400
 
@@ -121,14 +120,14 @@ whichCategory: 0
 ### post footer
 ### 作者信息部分设置
 high_song: 'high起来 &#128541;'  ### 歌曲显示文字，若不需要该功能，则留空或移除
-author_img: http://example.com/author.jpg
+author_img: https://es-7.github.io/blog/image/anthor.png
 author_profile_page: /about.html
 donate:
-  text: '赠我一杯 &#128536;' ### 打赏功能显示文字，若不需要，则留空或移除
+  text: '打赏资瓷 &#128536;' ### 打赏功能显示文字，若不需要，则留空或移除
   img: ### 打赏图片地址
-  - url: http://example.com/alipay.jpg
+  - url: https://es-7.github.io/blog/image/alipay.jpg
     alt: '支付宝付款'
-  - url: http://example.com/wechat.png
+  - url: https://es-7.github.io/blog/image/wchat.jpg
     alt: '微信付款'
 
 ### support html&text like notification's support in this theme,
@@ -152,7 +151,7 @@ visits_count:
 ## leancloud --- leancloud 阅读量统计
 ## {@leancloud:{enable:是否开启,className:创建的class,app_id:,app_key:,region:默认为中国地区,limits:热门文章显示总数}}
 leancloud:
-  enable: true
+  enable: false
   className: "BlogCounter"
   app_id: qNSsFQt9TtbIzEBBemL6nWYr-gzGzoHsz
   app_key: NWtDiuA0sfLK1CGS5HEW60OQ
@@ -201,4 +200,4 @@ busuanzi_src: //dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js
 # theme and site self settings
 since: 2015
 robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all，搜索 `meta name="robots"` 或请参考： https://support.google.com/webmasters/answer/79812?hl=zh-Hans
-version: 0.0.1
+version: 6.67
