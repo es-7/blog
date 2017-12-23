@@ -2,7 +2,7 @@
 title: 为何前端要使用框架？
 date: 2015-08-02
 top: 2000
-img: http://localhost:4000/blog/2015/08/02/whyUseFrame/1.png
+img: image/1.png
 categories: [web前端,框架]
 tags: [杂谈]
 ---

@@ -1,7 +1,7 @@
 ---
 title: 实现前端模板引擎
 date: 2015-07-18
-img: http://localhost:4000/blog/2015/08/02/whyUseFrame/3.png
+img: /image/template.jpg
 categories: [web前端,基础]
 tags: [模板引擎]
 ---

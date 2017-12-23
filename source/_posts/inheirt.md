@@ -2,7 +2,7 @@
 title: js原生继承
 date: 2015-07-03
 top: 200
-img: http://localhost:4000/blog/2015/08/02/whyUseFrame/2.png
+img: image/inheirt.jpg
 categories: [web前端,基础]
 tags: [继承]
 ---
