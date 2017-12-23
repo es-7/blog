@@ -165,7 +165,7 @@ disqus_shortname:
 duoshuo_shortname:
 ### gitment
 gitment:
-  enable: true
+  enable: false
   owner: es-7
   repo: https://github.com/es-7/blog/issues
   client_id: 72ff58a71d57e18c515b
