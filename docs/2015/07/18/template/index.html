@@ -32,7 +32,7 @@
 <link rel="stylesheet" href="/blog/css/pages/post.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/blog/css/thirdParty/highlight/github.css">
-<link rel="stylesheet" href="/blog/css/pages/comments.css">
+<link rel="stylesheet" href="/blog/.css">
 
     <!--script-->
 
@@ -42,23 +42,6 @@
 
 <!--<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>-->
 
-
-<script src="/blog/js/thirdParty/gitment.browser.min.js"></script>
-<script>
-  var labels = "blog,gitment";
-  labels = labels.split(",");
-  var gitment = new Gitment({
-    id: window.location.pathname,
-    owner: "GeekaholicLin",
-    repo: "geekaholiclin.github.io",
-    oauth: {
-      client_id: "aa2215dfc8ee944d1205",
-      client_secret: "77cd2afa5d161bc0ab04639ed81300d808c6e22b"
-    },
-    perPage: "20",
-    labels: labels
-  });
-</script>
 
     
     
@@ -299,7 +282,7 @@
                 
                 <li>发表日期: <span>2015-07-18  00:00:00</span></li>
                 
-                <li>最后编辑日期: <span>2017-12-23  09:26:33</span></li>
+                <li>最后编辑日期: <span>2017-12-23  18:53:43</span></li>
                 
                 <li class="post-category">
                     文章分类:
@@ -361,7 +344,7 @@
     
     <div>
         
-        <a href="/blog/" class="copyright-links">烬王111</a>&copy;2015 - 2017.All Rights
+        <a href="/blog/" class="copyright-links">烬王</a>&copy;2015 - 2017.All Rights
         Reserved.
     </div>
     <p>Powered by <a href="https://hexo.io" class="copyright-links" target="_blank">Hexo</a> | Theme by <a
@@ -387,10 +370,6 @@
     
 
     
-    <li class="comment-btn fa fa-comments-o">
-        <a href="#comments" title="comments"></a>
-    </li>
-    
 </ul>
 <p id="process"></p>
 <div id="search-overlay">
@@ -399,7 +378,7 @@
             <div class="input-wrap focus">
                 <i class="fa fa-search" aria-hidden="true"></i>
                 <input id="search-input" autofocus autocomplete="off" type="text"
-                       placeholder="search this website..."/>
+                       placeholder="站点搜索..."/>
             </div>
             <ul id="search-result">
                 <li class="load-first"><i class="fa fa-spinner fa-pulse"></i></li>
