@@ -32,7 +32,7 @@
 <link rel="stylesheet" href="/blog/css/pages/post.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/blog/css/thirdParty/highlight/github.css">
-<link rel="stylesheet" href="/blog/css/pages/comments.css">
+<link rel="stylesheet" href="/blog/.css">
 
     <!--script-->
 
@@ -42,23 +42,6 @@
 
 <!--<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>-->
 
-
-<script src="/blog/js/thirdParty/gitment.browser.min.js"></script>
-<script>
-  var labels = "blog,gitment";
-  labels = labels.split(",");
-  var gitment = new Gitment({
-    id: window.location.pathname,
-    owner: "es-7",
-    repo: "https://github.com/es-7/blog/issues",
-    oauth: {
-      client_id: "72ff58a71d57e18c515b",
-      client_secret: "51ca818e67a1e9234b5158b9a7e2a843b3ea8c93"
-    },
-    perPage: "20",
-    labels: labels
-  });
-</script>
 
     
     
@@ -381,10 +364,6 @@
     
     
 
-    
-    <li class="comment-btn fa fa-comments-o">
-        <a href="#comments" title="comments"></a>
-    </li>
     
 </ul>
 <p id="process"></p>
