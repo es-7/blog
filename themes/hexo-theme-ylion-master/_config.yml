@@ -4,7 +4,7 @@
 ## menu -- 导航菜单显示{[@page:名字/*多语言支持*/,@url:地址,@icon:显示的图标],[...]}
 menu:
 - page: home
-  url: /blog/
+  url:
   icon: fa-home
 - page: about
   url: /blog/about.html

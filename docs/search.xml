@@ -4,7 +4,7 @@
     
     <entry>
         <title><![CDATA[为何前端要使用框架？]]></title>
-        <url>https://es-7.github.io/blog/2015/08/02/whyUseFrame/</url>
+        <url>https://es-7.github.io/2015/08/02/whyUseFrame/</url>
         <content type="html"><![CDATA[<p>亲爱的各位观众看官好～最近在团队里组织了一次内容关于React的分享，然而后端有同学反映未能理解为何前端需要使用框架，框架究竟解决了什么问题。<br><a id="more"></a><br>回想刚入坑前端的时候，也接触了一些Java，当了解到其实Java可以生成HTML模板之后，对前端的信仰几乎崩溃。既然后端就可以渲染前端的话，前端价值到底在哪？感觉页面就是随便切一下就行，根本没必要用框架，当时着实迷茫了很久。</p>
 <p>后来对前端领域接触深了，再经过大神的指点，总算是理解为何前端需要使用框架。根据自己的理解，再结合分享时后端同学的疑问，于是有了这篇文章。本文相对小白向，只是通过虚拟一个项目说明问题，还望各位大神不吝赐教。</p>
 <h2 id="开始新项目"><a href="#开始新项目" class="headerlink" title="开始新项目"></a>开始新项目</h2><blockquote>
@@ -57,7 +57,7 @@
     
     <entry>
         <title><![CDATA[实现前端模板引擎]]></title>
-        <url>https://es-7.github.io/blog/2015/07/18/template/</url>
+        <url>https://es-7.github.io/2015/07/18/template/</url>
         <content type="html"><![CDATA[<p>   前端模板引擎相信大家都不会陌生了吧，尤其是注重前后端分离的今天(除非你还在用拼接字符串)。<br>   <strong>引擎</strong>一词总让人感觉很高端的样子，其实归根结底也只是处理字符串的一种方式而已。<br>   本文总结了3种实现模板引擎的方式，最后将逐步实现一个类似于 underscore.template 的模板插件。<br> <a id="more"></a>  </p>
 <h3 id="一、replace模板"><a href="#一、replace模板" class="headerlink" title="一、replace模板"></a>一、replace模板</h3><p>replace 是字符串提供的一个超级强大的方法，这里举例介绍简单的使用。</p>
 <ul>
@@ -153,7 +153,7 @@
     
     <entry>
         <title><![CDATA[js原生继承]]></title>
-        <url>https://es-7.github.io/blog/2015/07/03/inheirt/</url>
+        <url>https://es-7.github.io/2015/07/03/inheirt/</url>
         <content type="html"><![CDATA[<p>  js中的继承有多种实现方式，今天我们来分析一下各种继承的方式以及其优缺点。<br> <a id="more"></a>   </p>
 <h3 id="原型链继承"><a href="#原型链继承" class="headerlink" title="原型链继承"></a>原型链继承</h3><p>   首先介绍一下原型链的基本概念。<br>   先来理解一下原型、构造函数和实例之间的关系。      </p>
 <ul>
